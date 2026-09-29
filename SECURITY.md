@@ -17,7 +17,7 @@
 
 **No abras un issue público** si el hallazgo puede filtrar secretos, datos de presupuestos o archivos de arte.
 
-1. Preferible: [GitHub Security Advisory](https://github.com/Iniciativas-Alexendros/ecommerce-graficasnasve/security/advisories/new) en este repositorio.
+1. Preferible: [GitHub Security Advisory](https://github.com/Soluciones-Alexendros/ecommerce-graficasnasve/security/advisories/new) en este repositorio.
 2. Alternativa: correo a [operaciones@alexendros.dev](mailto:operaciones@alexendros.dev).
 
 Incluye: versión o commit, ruta o comando reproducido, y un caso **mínimo sintético** (nunca claves reales ni PDFs de clientes). Responderemos en un plazo máximo de 7 días naturales.
