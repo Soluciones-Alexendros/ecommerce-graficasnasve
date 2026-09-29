@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Visita guiada de bienvenida (onboarding)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  *
  * Tour de primera visita con driver.js: presenta el taller y la ruta
  * Tienda → Encargo → Presupuesto → Asistente. Se lanza solo una vez

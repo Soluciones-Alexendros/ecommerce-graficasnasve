@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Error boundary con identidad NASVE
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 'use client'

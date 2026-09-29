@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Encargo asistido (orquestador de 4 pasos).
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 'use client'

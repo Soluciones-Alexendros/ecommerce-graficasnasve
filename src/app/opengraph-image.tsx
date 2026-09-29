@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Imagen Open Graph (marca NASVE, generada con Satori)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 import { ImageResponse } from 'next/og'

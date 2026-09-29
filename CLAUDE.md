@@ -5,7 +5,7 @@
 <proyecto>
 Web e-commerce de **Gráficas NASVE** (imprenta offset/digital, Torrent, Valencia, desde 1982).
 Dominio objetivo: `graficasnasve.art` (DNS pendiente). Deploy temporal: `ecom-graficasnasve.vercel.app`.
-Stack: marketing + tienda/preformatos + presupuesto + panel admin. Empresa: Iniciativas Alexendros S.L.U.
+Stack: marketing + tienda/preformatos + presupuesto + panel admin. Empresa: Soluciones Alexendros S.L.U.
 Versión 0.2.0 (release v0.2.0, 2026-06-10).
 </proyecto>
 

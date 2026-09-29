@@ -1,5 +1,5 @@
 -- graficasnasve.art — Esquema inicial
--- © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+-- © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
 --
 -- Fuente de verdad: src/types/supabase.ts
 -- Aplicar con la CLI de Supabase (`supabase db push`) o pegando en el SQL Editor.

@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Barra CMYK (motivo recurrente del DS)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 interface PropsBarraCMYK {
