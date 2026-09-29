@@ -1,5 +1,11 @@
 # graficasnasve.art
 
+### Propósito de este documento
+
+- **Objetivos:** Presentar el e-commerce de Gráficas NASVE, el stack y los contratos de repo (P1+P2).
+- **Estructura:** Badges → producto → stack → desarrollo/Makefile → CI (`quality`/`test`/`build`/`smoke`) → documentación.
+- **Contenido a integrar según contexto:** Conserva producto, deploy Vercel y contenido de marketing. No copies un README de CLI. El catálogo es estático en código.
+
 [![CI/CD](https://img.shields.io/github/actions/workflow/status/Soluciones-Alexendros/ecommerce-graficasnasve/ci.yml?branch=main&logo=github)][ci-link]
 [![Vercel](https://img.shields.io/badge/Vercel-deploy-black?logo=vercel)][vercel-link]
 [![Website](https://img.shields.io/website?url=https://ecom-graficasnasve.vercel.app)][website-url]
@@ -34,24 +40,38 @@ pnpm dev                     # http://localhost:3000
 
 ### Comandos
 
-| Comando          | Acción                     |
-| ---------------- | -------------------------- |
-| `pnpm dev`       | Servidor de desarrollo     |
-| `pnpm build`     | Build producción (SSG/ISR) |
-| `pnpm typecheck` | `tsc --noEmit`             |
-| `pnpm lint`      | ESLint                     |
-| `pnpm test`      | Tests unitarios (Vitest)   |
-| `pnpm test:e2e`  | Tests E2E (Playwright)     |
+| Comando          | Acción                       |
+| ---------------- | ---------------------------- |
+| `pnpm dev`       | Servidor de desarrollo       |
+| `pnpm build`     | Build producción (SSG/ISR)   |
+| `pnpm typecheck` | `tsc --noEmit`               |
+| `pnpm lint`      | ESLint                       |
+| `pnpm test`      | Tests unitarios (Vitest)     |
+| `pnpm test:e2e`  | Tests E2E (Playwright)       |
+| `make lint`      | typecheck + lint + format    |
+| `make test`      | Vitest                       |
+| `make smoke`     | Playwright                   |
+| `make validate`  | lint + test + meta-secciones |
 
 ## CI/CD
 
-GitHub Actions ejecuta en cada push/PR:
+GitHub Actions (workflow **CI/CD**) ejecuta en cada push/PR los jobs canónicos:
 
-1. **Quality** — `typecheck` + `lint` + `test` (Vitest)
-2. **E2E** — `build` + `test:e2e` (Playwright/Chromium)
-3. **Deploy** — a Vercel solo si CI pasa en `main`
+1. **quality** — `typecheck` + `lint` + `format:check` + meta-secciones
+2. **test** — Vitest
+3. **build** — `pnpm build` (artefacto `.next`)
+4. **smoke** — Playwright/Chromium
+5. **Deploy** — `deploy.yml` a Vercel solo si CI/CD pasa en `main`
 
-## Documentación
+## Contratos
+
+- [`SECURITY.md`](./SECURITY.md) — avisos privados
+- [`CONTRIBUTING.md`](./CONTRIBUTING.md) — setup y PR
+- [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) · [`SUPPORT.md`](./SUPPORT.md)
+- [`AGENTS.md`](./AGENTS.md) · [`ARCHITECTURE.md`](./ARCHITECTURE.md)
+- [`docs/`](./docs/) — architecture, guides, runbooks
+
+## Documentación de producto
 
 - [`ARCHITECTURE.md`](./ARCHITECTURE.md) — Diseño del sistema, routing, modelo de datos
 - [`DEPLOYMENT.md`](./DEPLOYMENT.md) — Guía de despliegue y configuración

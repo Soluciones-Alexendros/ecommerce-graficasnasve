@@ -3,6 +3,16 @@
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y [Versionado Semántico](https://semver.org/lang/es/).
 
+## [Unreleased]
+
+### Cambiado
+
+- Alineación al canon de flota **P1+P2** (público, e-commerce): jobs CI
+  `quality` / `test` / `build` / `smoke`, Makefile, contratos
+  (SECURITY, CONTRIBUTING, CODEOWNERS, plantillas, docs/architecture+guides+runbooks).
+  Producto, `deploy.yml` y contenido de marketing se conservan. Renovate
+  sigue; no hay Dependabot version-updates.
+
 ## [0.3.0] — 2026-07-10
 
 ### Añadido

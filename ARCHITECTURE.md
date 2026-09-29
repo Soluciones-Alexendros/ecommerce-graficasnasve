@@ -1,5 +1,11 @@
 # ARCHITECTURE — graficasnasve.art
 
+### Propósito de este documento
+
+- **Objetivos:** Describir la arquitectura real del e-commerce (App Router, catálogo estático, Supabase, Resend, Vercel).
+- **Estructura:** Propósito de producto → stack → diagrama → directorios → datos y límites.
+- **Contenido a integrar según contexto:** Conserva el diseño de NASVE. No sustituyas el catálogo en código por una tabla. ADRs nuevos en `docs/architecture/decisions/`.
+
 > **Estado:** refleja la **implementación real** del repositorio (no un diseño previo).
 > Stack: **Next.js 16** · React 19 · TypeScript strict · Tailwind v4 · Supabase · Resend · Vercel · Cloudflare.
 > Documentos hermanos: [`ROADMAP.md`](./ROADMAP.md) · [`DEPLOYMENT.md`](./DEPLOYMENT.md) · esquema en [`supabase/migrations/0001_init.sql`](./supabase/migrations/0001_init.sql).

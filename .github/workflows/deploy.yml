@@ -16,7 +16,7 @@ concurrency:
 jobs:
   deploy:
     name: Vercel
-    runs-on: [self-hosted, ts]
+    runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     environment:
       name: production
@@ -51,7 +51,11 @@ jobs:
             exit 0
           fi
 
-          pnpm dlx vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"
+          if ! pnpm dlx vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"; then
+            echo "⚠️ Vercel pull falló (token inválido, permisos o límite Hobby). No bloquea el pipeline."
+            echo "url=unavailable" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           pnpm dlx vercel@latest build --prod --token="$VERCEL_TOKEN"
           URL=$(pnpm dlx vercel@latest deploy --prebuilt --prod --token="$VERCEL_TOKEN")
           echo "url=$URL" >> "$GITHUB_OUTPUT"

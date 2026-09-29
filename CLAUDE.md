@@ -15,7 +15,7 @@ Versión 0.2.0 (release v0.2.0, 2026-06-10).
 - **Resend** (`react-email`) — emails de presupuesto. **Zod 4** + **react-hook-form** (formularios). **driver.js** (visita guiada). **next-themes**, **lucide-react**.
 - Gestor: **pnpm@11.5.2** (corepack). Node **22.x** (engines). Deploy: **Vercel** (región `cdg1`, `vercel.json`).
 - Comandos REALES (package.json): `pnpm dev` · `pnpm build` · `pnpm start` · `pnpm lint` (eslint) · `pnpm typecheck` (tsc --noEmit) · `pnpm test` (vitest run) · `pnpm test:watch` · `pnpm test:e2e` (playwright).
-- CI/CD: GitHub Actions en cada PR/push (`typecheck·lint·test·e2e`); autodeploy a Vercel solo con CI verde en `main` (protegida, PR obligatorio).
+- CI/CD: GitHub Actions en cada PR/push (jobs `quality` · `test` · `build` · `smoke`); autodeploy a Vercel solo con CI verde en `main` (protegida, PR obligatorio). `make lint|test|smoke|validate`.
 </stack>
 
 <estado>

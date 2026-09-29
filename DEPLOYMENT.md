@@ -1,5 +1,11 @@
 # DEPLOYMENT — graficasnasve.art
 
+### Propósito de este documento
+
+- **Objetivos:** Documentar el despliegue real (Vercel + Cloudflare + secretos) sin reescribir el pipeline.
+- **Estructura:** Requisitos → env → Supabase/Resend → Vercel/Cloudflare → CI.
+- **Contenido a integrar según contexto:** Conserva `deploy.yml` y el nombre de workflow **CI/CD**. El runbook corto está en `docs/runbooks/ci-deploy.md`.
+
 > Guía de despliegue y configuración. Hermanos: [`ARCHITECTURE.md`](./ARCHITECTURE.md) · [`ROADMAP.md`](./ROADMAP.md).
 
 ## 1. Requisitos
