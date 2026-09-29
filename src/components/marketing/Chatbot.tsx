@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Asistente flotante (maqueta guiada, sin IA)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  *
  * Cualifica el encargo en 4 preguntas amables y pasa el resumen al flujo /encargo.
  */

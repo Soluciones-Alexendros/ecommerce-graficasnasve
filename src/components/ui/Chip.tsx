@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Chip (etiqueta pill mono uppercase)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 export type TonoChip = 'key' | 'ambar' | 'cyan' | 'sky' | 'coral' | 'spot-blue' | 'lavender' | 'plain'

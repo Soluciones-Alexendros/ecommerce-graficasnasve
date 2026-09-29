@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Logo (marca cuarto-de-círculo CMYK + wordmark «nasve.»)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 interface PropsLogo {

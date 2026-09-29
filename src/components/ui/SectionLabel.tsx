@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — SectionLabel (nº de lámina + marca de registro + rótulo)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 import { MarcaRegistro } from './MarcaRegistro'

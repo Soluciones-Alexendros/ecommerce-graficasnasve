@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — SpecTable (tabla de specs con filas alternas)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 export interface FilaSpec {

@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Iconos geométricos del DS (motivo «baldosa»)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  *
  * SVGs monocromos (currentColor) que visten las baldosas de color: el
  * vocabulario de imprenta del deck (barras de tinta, cuarto CMYK, etc.).

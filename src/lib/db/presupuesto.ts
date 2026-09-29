@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Persistencia de presupuestos en Supabase.
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 import { createAdminClient } from '@/lib/supabase/admin'

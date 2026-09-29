@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Marca de registro (crosshair de imprenta)
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 interface PropsMarcaRegistro {

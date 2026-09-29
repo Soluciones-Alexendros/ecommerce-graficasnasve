@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art — Cliente administrativo de Supabase (service role).
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 import { createServerClient } from '@supabase/ssr'

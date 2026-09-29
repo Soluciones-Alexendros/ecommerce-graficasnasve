@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 
 import Link from 'next/link'
@@ -111,7 +111,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-papel/10 flex flex-col gap-2 md:flex-row md:justify-between md:items-center">
           <p className="text-xs text-gris">© 2026 Gráficas NASVE, S.L. · CIF B46261210</p>
           <p className="text-xs text-gris">
-            Desarrollado por <span className="text-papel/60">Iniciativas Alexendros S.L.U.</span>
+            Desarrollado por <span className="text-papel/60">Soluciones Alexendros S.L.U.</span>
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 # graficasnasve.art
 
-[![CI/CD](https://img.shields.io/github/actions/workflow/status/Iniciativas-Alexendros/ecommerce-graficasnasve/ci.yml?branch=main&logo=github)][ci-link]
+[![CI/CD](https://img.shields.io/github/actions/workflow/status/Soluciones-Alexendros/ecommerce-graficasnasve/ci.yml?branch=main&logo=github)][ci-link]
 [![Vercel](https://img.shields.io/badge/Vercel-deploy-black?logo=vercel)][vercel-link]
 [![Website](https://img.shields.io/website?url=https://ecom-graficasnasve.vercel.app)][website-url]
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript)][ts-link]
@@ -63,7 +63,7 @@ GitHub Actions ejecuta en cada push/PR:
 
 ```bash
 # Clonar y renombrar
-git clone https://github.com/Iniciativas-Alexendros/ecommerce-graficasnasve.git mi-proyecto
+git clone https://github.com/Soluciones-Alexendros/ecommerce-graficasnasve.git mi-proyecto
 cd mi-proyecto
 
 # Configuración inicial
@@ -75,7 +75,7 @@ pnpm dev
 
 Ver checklist completa en [`CHECKLIST-PROD.md`](./CHECKLIST-PROD.md).
 
-[ci-link]: https://github.com/Iniciativas-Alexendros/ecommerce-graficasnasve/actions
+[ci-link]: https://github.com/Soluciones-Alexendros/ecommerce-graficasnasve/actions
 [vercel-link]: https://ecom-graficasnasve.vercel.app
 [website-url]: https://ecom-graficasnasve.vercel.app
 [ts-link]: https://www.typescriptlang.org/

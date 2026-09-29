@@ -1,6 +1,6 @@
 /**
  * graficasnasve.art
- * © 2026 Iniciativas Alexendros S.L.U. — Todos los derechos reservados.
+ * © 2026 Soluciones Alexendros S.L.U. — Todos los derechos reservados.
  */
 import type { Metadata } from 'next'
 import './globals.css'
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'Gráficas NASVE',
   ],
   authors: [{ name: 'Gráficas NASVE, S.L.' }],
-  creator: 'Iniciativas Alexendros S.L.U.',
+  creator: 'Soluciones Alexendros S.L.U.',
   openGraph: {
     type: 'website',
     locale: 'es_ES',
