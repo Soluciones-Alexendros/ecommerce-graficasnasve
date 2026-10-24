@@ -8,7 +8,7 @@
 
 [![CI/CD](https://img.shields.io/github/actions/workflow/status/Soluciones-Alexendros/ecommerce-graficasnasve/ci.yml?branch=main&logo=github)][ci-link]
 [![Vercel](https://img.shields.io/badge/Vercel-deploy-black?logo=vercel)][vercel-link]
-[![Website](https://img.shields.io/website?url=https://ecom-graficasnasve.vercel.app)][website-url]
+[![Website](https://img.shields.io/website?url=https://ecommerce-graficasnasve.vercel.app)][website-url]
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript)][ts-link]
 [![Next.js](https://img.shields.io/badge/Next.js-16-000?logo=next.js)][next-link]
 [![Playwright](https://img.shields.io/badge/Playwright-4B47D4?logo=playwright)][pw-link]
@@ -96,8 +96,8 @@ pnpm dev
 Ver checklist completa en [`CHECKLIST-PROD.md`](./CHECKLIST-PROD.md).
 
 [ci-link]: https://github.com/Soluciones-Alexendros/ecommerce-graficasnasve/actions
-[vercel-link]: https://ecom-graficasnasve.vercel.app
-[website-url]: https://ecom-graficasnasve.vercel.app
+[vercel-link]: https://ecommerce-graficasnasve.vercel.app
+[website-url]: https://ecommerce-graficasnasve.vercel.app
 [ts-link]: https://www.typescriptlang.org/
 [next-link]: https://nextjs.org/
 [pw-link]: https://playwright.dev/
