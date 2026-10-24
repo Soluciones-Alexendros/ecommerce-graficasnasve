@@ -5,7 +5,10 @@ import type { DatosPresupuesto } from '@/lib/validaciones/presupuesto'
 // la factoría de `vi.mock` (que se eleva por encima de los imports).
 const { sendMock } = vi.hoisted(() => ({ sendMock: vi.fn() }))
 vi.mock('resend', () => ({
-  Resend: vi.fn(() => ({ emails: { send: sendMock } })),
+  // Vitest 4 exige `function`/`class` cuando el SUT usa `new Resend(...)`.
+  Resend: vi.fn(function Resend() {
+    return { emails: { send: sendMock } }
+  }),
 }))
 
 import { sendEmailPresupuesto } from './presupuesto'
