@@ -74,8 +74,8 @@ export function BannerCookies() {
             Cookies y analítica
           </h2>
           <p id={descId} className="font-sans text-sm leading-relaxed text-gris">
-            Usamos cookies esenciales para el sitio. La analítica (Google Analytics 4) solo se activa si aceptas.
-            Puedes rechazar sin perder el uso del sitio.{' '}
+            Usamos cookies esenciales para el sitio. La analítica (Google Analytics 4) solo se activa si aceptas. Puedes
+            rechazar sin perder el uso del sitio.{' '}
             <Link href="/cookies" className="underline underline-offset-2 hover:text-key">
               Política de cookies
             </Link>
