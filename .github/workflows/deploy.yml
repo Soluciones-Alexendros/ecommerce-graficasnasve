@@ -1,3 +1,5 @@
+# Smoke post-deploy: no despliega.
+# Production la publica solo la integración Git de Vercel.
 name: Deploy → Producción
 
 on:
@@ -14,49 +16,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    name: Vercel
+  smoke-prod:
+    name: smoke-prod
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     environment:
       name: production
-      url: ${{ steps.deploy.outputs.url }}
+      url: https://ecommerce-graficasnasve.vercel.app
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          ref: ${{ github.event.workflow_run.head_sha }}
-          persist-credentials: false
-
-      - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
-        with:
-          version: 11.5.2
-
-      - uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
-        with:
-          node-version: '22'
-          cache: pnpm
-
-      - run: pnpm install --frozen-lockfile
-
-      - name: Deploy to Vercel
-        id: deploy
-        env:
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      - name: HTTP 200 en Production
         run: |
-          if [ -z "$VERCEL_TOKEN" ]; then
-            echo "⚠️ VERCEL_TOKEN no configurado. Define en Settings → Secrets → Actions."
-            echo "url=unavailable" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          if ! pnpm dlx vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"; then
-            echo "⚠️ Vercel pull falló (token inválido, permisos o límite Hobby). No bloquea el pipeline."
-            echo "url=unavailable" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          pnpm dlx vercel@latest build --prod --token="$VERCEL_TOKEN"
-          URL=$(pnpm dlx vercel@latest deploy --prebuilt --prod --token="$VERCEL_TOKEN")
-          echo "url=$URL" >> "$GITHUB_OUTPUT"
-          echo "✅ Deployed: $URL"
+          set -euo pipefail
+          URL='https://ecommerce-graficasnasve.vercel.app'
+          for i in 1 2 3 4 5 6; do
+            CODE=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 30 "$URL" || echo '000')
+            echo "Intento $i → HTTP $CODE"
+            if [ "$CODE" = '200' ]; then
+              echo "✅ Production responde 200: $URL"
+              exit 0
+            fi
+            sleep $((i * 10))
+          done
+          echo "::error::Production no respondió 200 tras reintentos ($URL)"
+          exit 1

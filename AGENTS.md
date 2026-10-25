@@ -71,7 +71,7 @@ pnpm build && make smoke
 make validate
 ```
 
-CI principal (`.github/workflows/ci.yml`, nombre **CI/CD**): jobs `quality`, `test`, `build`, `smoke`. El deploy a Vercel queda en `deploy.yml` (se dispara si CI/CD en `main` termina en éxito). No lo renombres.
+CI principal (`.github/workflows/ci.yml`, nombre **CI/CD**): jobs `quality`, `test`, `build`, `smoke`. Production la publica la integración Git de Vercel. `deploy.yml` solo hace smoke HTTP 200 tras CI/CD en `main` (no despliega). No renombres el workflow **CI/CD**.
 
 ## Convenciones
 
@@ -90,7 +90,7 @@ src/app/api/           presupuesto + webhook stripe (stub)
 src/lib/               catálogo, precio, supabase, validaciones Zod
 e2e/                   Playwright
 docs/                  architecture/, guides/, runbooks/
-.github/workflows/     ci.yml (quality/test/build/smoke) + deploy.yml
+.github/workflows/     ci.yml (quality/test/build/smoke) + deploy.yml (smoke-prod)
 ```
 
 ## Definition of Done

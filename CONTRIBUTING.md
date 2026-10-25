@@ -19,7 +19,7 @@ pnpm dev                     # http://localhost:3000
 
 ## Flujo de trabajo
 
-Rama `feat/*` / `fix/*` / `docs/*` / `chore/*` (agentes Cloud: `cursor/…`) → PR contra `main` → CI verde → merge. `main` está protegida; el deploy a Vercel (`deploy.yml`) solo corre si el workflow **CI/CD** termina en éxito.
+Rama `feat/*` / `fix/*` / `docs/*` / `chore/*` (agentes Cloud: `cursor/…`) → PR contra `main` → CI verde → merge. `main` está protegida; Production la despliega la integración Git de Vercel. `deploy.yml` solo comprueba HTTP 200 tras CI/CD en `main`.
 
 Los hooks `husky` (si están activos en local) corren lint-staged en pre-commit.
 
