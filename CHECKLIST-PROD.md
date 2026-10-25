@@ -13,6 +13,7 @@
 | Licencia propietario / UNLICENSED en README | [#24](https://github.com/Soluciones-Alexendros/ecommerce-graficasnasve/pull/24) | Abierto |
 | Preflight archivos (MIME real, tamaño, resolución) | [#25](https://github.com/Soluciones-Alexendros/ecommerce-graficasnasve/pull/25) | Abierto · required CI verde |
 | Consent GA4 (banner + Consent Mode v2 + e2e) | [#26](https://github.com/Soluciones-Alexendros/ecommerce-graficasnasve/pull/26) | Abierto |
+| Checklist evidencia Ronda 2 | [#27](https://github.com/Soluciones-Alexendros/ecommerce-graficasnasve/pull/27) | Abierto |
 | Precios reales NASVE | — | **No hay PR**: sin tarifa cerrada; no se inventan importes (2026-10-25) |
 
 URL prod: `https://ecommerce-graficasnasve.vercel.app` → HTTP 200 (verificado en Ronda 1 / smoke). Preview Vercel: rate limit Hobby (24 h) en varios PRs.
