@@ -1,5 +1,6 @@
-import { test, expect } from './fixtures'
+import { test, expect } from '@playwright/test'
 
+// No usa el fixture por defecto: ese siembra consent=rejected y ocultaría el banner.
 const GOOGLE_HOST = /google-analytics\.com|googletagmanager\.com|google\.com\/ccm|www\.google\.com\/ads/
 
 test.describe('consentimiento GA4', () => {
@@ -8,6 +9,8 @@ test.describe('consentimiento GA4', () => {
     await context.addInitScript(() => {
       try {
         window.localStorage.removeItem('nasve-cookie-consent')
+        // Evita que el tour tape el banner sin marcar consentimiento.
+        window.localStorage.setItem('nasve:tour-visto:v1', '1')
       } catch {
         /* ignore */
       }
@@ -33,6 +36,7 @@ test.describe('consentimiento GA4', () => {
     })
 
     await page.goto('/')
+    await expect(page.getByRole('dialog', { name: /cookies y analítica/i })).toBeVisible()
     await page.getByRole('button', { name: /^rechazar$/i }).click()
     await expect(page.getByRole('dialog', { name: /cookies y analítica/i })).toHaveCount(0)
     await page.waitForTimeout(800)
@@ -45,6 +49,7 @@ test.describe('consentimiento GA4', () => {
     })
 
     await page.goto('/')
+    await expect(page.getByRole('dialog', { name: /cookies y analítica/i })).toBeVisible()
     await page.getByRole('button', { name: /^aceptar$/i }).click()
     const req = await gtagPromise
     expect(req.url()).toMatch(/G-TEST000000/)
